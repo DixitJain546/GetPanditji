@@ -136,7 +136,7 @@ header {
     width: 150px;
     height: 150px;
     align-content: center;
-    align-self: center
+    align-self: center;
 }
 
 .loginAvtarBlock img {
@@ -414,7 +414,7 @@ input:hover {
     display: none;
     height: 100px;
     width: 100%;
-    background-color: orange;
+    background-color:whitesmoke;
 }
 
 .mobile .iconss {
@@ -794,11 +794,17 @@ input:hover {
 .mainTransparent {
     padding: 0.5%;
     width: 90%;
-    color: #ddd;
-    height: 450px;
+    color: #eee;
     margin-left: 5%;
-    margin-top: 30px;
+    margin-top: 70px;
+    padding-bottom: 50px;
     background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+}
+.bodyscroll{
+    
+    width: 99%;
+    height: 99%;
 }
 
 .orderTable {
@@ -819,6 +825,16 @@ td {
     text-align: center;
 }
 
+@media only screen and (max-width: 1000px)
+{
+    .mainTransparent {
+        height: 500px;
+    }
+    .bodyscroll{
+        overflow: scroll;
+        height: 450px;
+    }
+}
 /* @media only screen and (max-width: 540px) {
     .cards {
          width: 300px; 
