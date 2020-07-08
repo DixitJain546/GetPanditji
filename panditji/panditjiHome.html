@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+    <script src="bower_components/aos/dist/aos.js"></script>
+    <title>
+        Get Panditji
+    </title>
+</head>
+
+<body>
+
+    <section>
+        <nav class="desktop" aos="fade">
+            <div class="plogo">
+                <img src="images/logo.png" height="140px" width="auto" alt="Logo" style="float:left;">
+                <div class="pandit">
+                    <img src="images/plogolight.png" height="70px" width="auto" alt="LogoName" style="float:left;">
+                </div>
+                <div class="menulog">
+                    <button onclick="loginForm()">Login</button>&nbsp &nbsp
+                    <Button onclick="registrationForm()">Register</button>
+                </div>
+            </div>
+            <script>
+                function loginForm() {
+                    var o = document.getElementById("loginOverlay");
+                    o.style.display = "block";
+                }
+
+                function registrationForm() {
+                    var o = document.getElementById("registrationOverlay");
+                    o.style.display = "block";
+                }
+            </script>
+            <div class="menu">
+                <div class="menualign"><a href="index1.html" class="selected">Home</a>
+                    <a href="Puja/">Puja</a>
+                    <a href="City/">City</a>
+                    <a href="contact/">Contact us</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="mobile">
+            <img src="images/logo.png" height="90px" width="auto" alt="Logo" style="float:left;margin-top: 5px;margin-left: 20px;">
+
+            <div class="iconss">
+                <a onclick="openMenu()"><i class="fa fa-bars"></i></a>
+            </div>
+        </nav>
+
+        <script>
+            function openMenu() {
+                if (document.getElementById("myForm").style.display === 'none') {
+                    document.getElementById("myForm").style.display = "block";
+                    document.getElementById("myForm").style.animation = "myfirst 30000";
+                } else {
+                    document.getElementById("myForm").style.display = "none";
+                }
+            }
+
+            function closeform() {
+
+                document.getElementById("myForm").style.display = "none";
+
+            }
+        </script>
+        <div class="block1"></div>
+        <!-- Slider -->
+        <div class="slider">
+
+            <ul id="slides">
+                <li class="slide showing">
+                    <div class=overlay></div>
+
+                    <img src="images/1.jpg" height="400px" width="100%">
+                    <div class="onImageText">Durga Puja</div>
+                    <button class="button">Book Now</button>
+                </li>
+                <li class="slide">
+                    <div class=overlay></div>
+                    <div class="backOverlay">
+                        <img src="images/2.jpg" height="400px" width="100%">
+                        <div class="onImageText">Sundar Kand</div>
+                        <button class="button">Book Now</button>
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class=overlay></div>
+
+                    <img src="images/3.jpg" height="400px" width="100%">
+                    <div class="onImageText">Laxmi Puja</div>
+                    <button class="button">Book Now</button>
+                </li>
+            </ul>
+            <script>
+                var slides = document.querySelectorAll('#slides .slide');
+                var currentSlide = 0;
+                var slideInterval = setInterval(nextSlide, 3000);
+
+                function nextSlide() {
+                    slides[currentSlide].className = 'slide';
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].className = 'slide showing';
+                }
+            </script>

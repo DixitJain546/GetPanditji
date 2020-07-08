@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+    <script src="bower_components/aos/dist/aos.js"></script>
+    <title>
+        Get Panditji
+    </title>
+</head>
+
+<body>
+    <div class="bodyOverlay" id="bookingOverlay">
+        <div class="booking">
+            <img id="bookingImage" src="../images/lagan puja.jpg" alt="Hindu Vivah">
+            <a id="bookingCancel" href="../puja/panditList.html"><img src="../images/iconfinder_Delete_1493279.png" width="24px"></a>
+            <h3 style="margin-left: 37px;">Product :</h3>
+            <h2><i>Hindu Vivah</i></h2>
+            <h3 style="margin-left: 37px;">PanditJi :</h3>
+            <h2><i>Ramshankarji</i></h2>
+            <div id="bDate">
+                <h3>Pick Date :</h3>
+                <input type="date" required></input>
+            </div>
+            <div id="bTime">
+                <h3>Set Time :</h3>
+                <input type="time" required></input>
+            </div>
+            <p><img class="booking-img" src="../images/plogolight.png" height="20px" width="200px"></p>
+            <a href="../booking/orderList.html">
+                <p><button class="button3">Confirm Booking</button></p>
+            </a>
+        </div>
+    </div>
+    <script>
+        function bookNow() {
+            var o = document.getElementById("bookingOverlay");
+            o.style.display = "block";
+        }
+        document.querySelector("booking").addEventListener(onmouseover, showCancel());
+
+        function showCancel() {
+            document.getElementById("bookingCancel").style.display = inherit;
+        }
+        document.getElementById("bookingCancel").addEventListener(onclick, "closeBooking()");
+    </script>
+    <section>
+        <nav class="desktop" aos="fade">
+            <div class="plogo">
+                <img src="../images/logo.png" height="140px" width="auto" alt="Logo" style="float:left;">
+                <div class="pandit">
+                    <img src="../images/plogolight.png" height="70px" width="auto" alt="LogoName" style="float:left;">
+                </div>
+                <div class="menulog">
+                    <button>Login</button>&nbsp &nbsp
+                    <Button>Register</button>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menualign"><a href="../index.html" class="selected">Home</a>
+                    <a href="index.html">Puja</a>
+                    <a href="City/">City</a>
+                    <a href="contact/">Contact us</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="mobile">
+            <img src="images/logo.png" height="90px" width="auto" alt="Logo" style="float:left;margin-top: 5px;margin-left: 20px;">
+
+            <div class="iconss">
+                <a onclick="openMenu()"><i class="fa fa-bars"></i></a>
+            </div>
+        </nav>
+
+        <script>
+            function openMenu() {
+                if (document.getElementById("myForm").style.display === 'none') {
+                    document.getElementById("myForm").style.display = "block";
+                    document.getElementById("myForm").style.animation = "myfirst 30000";
+                } else {
+                    document.getElementById("myForm").style.display = "none";
+                }
+            }
+        </script>
+        <div class="block1"></div>
+
+        <!-- puja card -->
+
+        <script>
+            function bookNow() {
+                var o = document.getElementById("bookingOverlay");
+                o.style.display = "block";
+            }
+            document.querySelector("booking").addEventListener(onmouseover, showCancel());
+
+            function showCancel() {
+                document.getElementById("bookingCancel").style.display = inherit;
+            }
+            document.getElementById("bookingCancel").addEventListener(onclick, "closeBooking()");
+        </script>
+        <section class="main">
+            <div class="PanditCard" id="Pandit Ramshankarji" onclick="bookNow()">
+                <img src="../images/pandit1.jpg" style="width:100%; height:80%">
+                <div class="PanditTitle">Pandit Ramshankarji</div>
+            </div>
+            <div class="PanditCard" id="Pandit Shivnathji" onclick="bookNow()">
+                <img src="../images/pandit2.jpg" style="width:100%; height:80%">
+                <div class="PanditTitle">Pandit Shivnathji</div>
+            </div>
+            <div class="PanditCard" id="Pandit Tathcaharyaji" onclick="bookNow()">
+                <img src="../images/pandit3.jpg" style="width:100%; height:80%">
+                <div class="PanditTitle">Pandit Tathacharyaji</div>
+            </div>
+            <div class="PanditCard" id="Pandit Ramakrishnaji" onclick="bookNow()">
+                <img src="../images/pandit4.jpg" style="width:100%; height:80%">
+                <div class="PanditTitle">Pandit Ramakrishnaji</div>
+            </div>
+            <div class="PanditCard" id="Pandit Tenaliramaji" onclick="bookNow()">
+                <img src="../images/pandit5.jpg" style="width:100%; height:80%">
+                <div class="PanditTitle">Pandit Tenaliramaji</div>
+            </div>
+            <div class="PanditCard" id="Pandit Sukhsagarji" onclick="bookNow()">
+                <img src="../images/pandit6.jpg" style="width:100%; height:80%">
+                <div class="PanditTitle">Pandit Sukhsagarji</div>
+            </div>
+        </section>
+
+        <!-- puja cards end -->
+        <!-- Footer-->
+        <div class="footer">
+            <div class="footer-top">
+                <div class="footer-section a">
+                    <h1 class="name">GET PANDITJI</h1>
+                    <P>
+                        You can get panditji here for any type of puja.You can book pandit from our website quickly .
+                    </P>
+                    <div class="contact">
+                        <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span><br><br>
+                        <span><i class="fas fa-envelope"></i> &nbsp; getpanditji@gmail.com</span>
+                    </div>
+                </div>
+                <div class="footer-section b">
+                    <h2>Quick Links </h2>
+
+                    <ul>
+                        <a href="#">
+                            <li>Home</li>
+                        </a>
+                        <a href="#">
+                            <li>Puja</li>
+                        </a>
+                        <a href="#">
+                            <li>City</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact</li>
+                        </a>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2020 All rights reserved | Get Panditji.com
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

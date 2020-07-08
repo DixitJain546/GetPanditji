@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+    <script src="bower_components/aos/dist/aos.js"></script>
+    <title>
+        Get Panditji
+    </title>
+</head>
+
+<body>
+    <section>
+        <nav class="desktop" aos="fade">
+            <div class="plogo">
+                <img src="../images/logo.png" height="140px" width="auto" alt="Logo" style="float:left;">
+                <div class="pandit">
+                    <img src="../images/plogolight.png" height="70px" width="auto" alt="LogoName" style="float:left;">
+                </div>
+                <div class="menulog">
+                    <button>Login</button>&nbsp &nbsp
+                    <Button>Register</button>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menualign"><a href="index1.html" class="selected">Home</a>
+                    <a href="Puja/">Puja</a>
+                    <a href="City/">City</a>
+                    <a href="contact/">Contact us</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="mobile">
+            <img src="images/logo.png" height="90px" width="auto" alt="Logo" style="float:left;margin-top: 5px;margin-left: 20px;">
+
+            <div class="iconss">
+                <a onclick="openMenu()"><i class="fa fa-bars"></i></a>
+            </div>
+        </nav>
+
+        <script>
+            function openMenu() {
+                if (document.getElementById("myForm").style.display === 'none') {
+                    document.getElementById("myForm").style.display = "block";
+                    document.getElementById("myForm").style.animation = "myfirst 30000";
+                } else {
+                    document.getElementById("myForm").style.display = "none";
+                }
+            }
+
+            function closeform() {
+
+                document.getElementById("myForm").style.display = "none";
+
+            }
+        </script>
+        <div class="block1"></div>
+
+        <!-- Footer-->
+        <div class="footer">
+            <div class="footer-top">
+                <div class="footer-section a">
+                    <h1 class="name">GET PANDITJI</h1>
+                    <P>
+                        You can get panditji here for any type of puja.You can book pandit from our website quickly .
+                    </P>
+                    <div class="contact">
+                        <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span><br><br>
+                        <span><i class="fas fa-envelope"></i> &nbsp; getpanditji@gmail.com</span>
+                    </div>
+                </div>
+                <div class="footer-section b">
+                    <h2>Quick Links </h2>
+
+                    <ul>
+                        <a href="#">
+                            <li>Home</li>
+                        </a>
+                        <a href="#">
+                            <li>Puja</li>
+                        </a>
+                        <a href="#">
+                            <li>City</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact</li>
+                        </a>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2020 All rights reserved | Get Panditji.com
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
