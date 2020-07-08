@@ -1,210 +1,328 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+  <head>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
     <script src="bower_components/aos/dist/aos.js"></script>
     <title>
-        Get Panditji
+      Get Panditji
     </title>
-</head>
+  </head>
 
-<body>
-
-    <section>
-        <nav class="desktop" aos="fade">
-            <div class="plogo">
-                <img src="images/logo.png" height="140px" width="auto" alt="Logo" style="float:left;">
-                <div class="pandit">
-                    <img src="images/plogolight.png" height="70px" width="auto" alt="LogoName" style="float:left;">
-                </div>
-                <div class="menulog">
-                    <button onclick="loginForm()">Login</button>&nbsp &nbsp
-                    <Button onclick="registrationForm()">Register</button>
-                </div>
-            </div>
-            <script>
-                function loginForm() {
-                    var o = document.getElementById("loginOverlay");
-                    o.style.display = "block";
-                }
-
-                function registrationForm() {
-                    var o = document.getElementById("registrationOverlay");
-                    o.style.display = "block";
-                }
-            </script>
-            <div class="menu">
-                <div class="menualign"><a href="../index.html" class="selected">Home</a>
-                    <a href="puja/index.html">Puja</a>
-                    <a href="City/">City</a>
-                    <a href="contact/">Contact us</a>
-                </div>
-            </div>
-        </nav>
-        <nav class="mobile">
-            <img src="images/logo.png" height="90px" width="auto" alt="Logo" style="float:left;margin-top: 5px;margin-left: 20px;">
-
-            <div class="iconss">
-                <a onclick="openMenu()"><i class="fa fa-bars"></i></a>
-            </div>
-        </nav>
-
+  <body>
+    <section >
+      <nav class="desktop" aos="fade">
+        <div class="plogo">
+          <img
+            src="images/logo.png"
+            height="140px"
+            width="auto"
+            alt="Logo"
+            style="float: left;"
+          />
+          <div class="pandit">
+            <img
+              src="images/plogolight.png"
+              height="70px"
+              width="auto"
+              alt="LogoName"
+              style="float: left;"
+            />
+          </div>
+          <div class="menulog">
+            <button onclick="loginForm()">Login</button>&nbsp &nbsp
+            <button onclick="registrationForm()">Register</button>
+          </div>
+        </div>
         <script>
-            function openMenu() {
-                if (document.getElementById("myForm").style.display === 'none') {
-                    document.getElementById("myForm").style.display = "block";
-                    document.getElementById("myForm").style.animation = "myfirst 30000";
-                } else {
-                    document.getElementById("myForm").style.display = "none";
-                }
-            }
+          function loginForm() {
+            var o = document.getElementById("loginOverlay");
+            o.style.display = "block";
+          }
 
-            function closeform() {
-
-                document.getElementById("myForm").style.display = "none";
-
-            }
+          function registrationForm() {
+            var o = document.getElementById("registrationOverlay");
+            o.style.display = "block";
+          }
         </script>
-        <div class="block1"></div>
-        <!-- Slider -->
-        <div class="slider">
-
-            <ul id="slides">
-                <li class="slide showing">
-                    <div class=overlay></div>
-
-                    <img src="images/1.jpg" height="400px" width="100%">
-                    <div class="onImageText">Durga Puja</div>
-                    <button class="button">Book Now</button>
-                </li>
-                <li class="slide">
-                    <div class=overlay></div>
-                    <div class="backOverlay">
-                        <img src="images/2.jpg" height="400px" width="100%">
-                        <div class="onImageText">Sundar Kand</div>
-                        <button class="button">Book Now</button>
-                    </div>
-                </li>
-                <li class="slide">
-                    <div class=overlay></div>
-
-                    <img src="images/3.jpg" height="400px" width="100%">
-                    <div class="onImageText">Laxmi Puja</div>
-                    <button class="button">Book Now</button>
-                </li>
-            </ul>
-            <script>
-                var slides = document.querySelectorAll('#slides .slide');
-                var currentSlide = 0;
-                var slideInterval = setInterval(nextSlide, 3000);
-
-                function nextSlide() {
-                    slides[currentSlide].className = 'slide';
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    slides[currentSlide].className = 'slide showing';
-                }
-            </script>
+        <div class="menu">
+          <div class="menualign">
+            <a href="../index.html" class="selected">Home</a>
+            <a href="puja/index.html">Puja</a>
+            <a href="City/">City</a>
+            <a href="contact/">Contact us</a>
+          </div>
         </div>
-        <!-- Login Modal -->
-        <!--  -->
-        <div class="bodyOverlay" id="loginOverlay">
-            <div class="loginForm">
-                <a href="index.html"><i class="fa fa-close" style="float:right; color:white; width:30px;"></i></a>
-                <div class="upperblock">
-                    <h1 class="title">Login</h1>
-                </div>
-                <div class="loginAvtarBlock">
-                    <img src="images/avatar1.png">
-                </div>
-                <form class="form1">
-                    <div class="input-icons">
-                        <i class="fa fa-phone icon"></i>
-                        <input class="un " type="email" align="center" placeholder="Mobile Number">
-                    </div>
-                    <div class="input-icons">
-                        <i class="fa fa-key icon"></i>
-                        <input class="pass" type="password" align="center" placeholder="Password">
-                    </div>
-                    <p><img src="images/plogolight.png" height="20px" width="200px"></p>
-                    <p><button class="button3">LOGIN</button></p>
-                </form>
+      </nav>
+      <nav class="mobile">
+        <img
+          src="images/logo.png"
+          height="90px"
+          width="auto"
+          alt="Logo"
+          style="float: left; margin-top: 5px; margin-left: 20px;"
+        />
+
+        <div class="iconss">
+          <a onclick="openMenu()"><i class="fa fa-bars"></i></a>
+        </div>
+      </nav>
+      <div class="om" id="myForm">
+        <br /><br />
+        <span
+          onclick="closeform()"
+          style="font-size: 25px; margin-left: 110px; color: white;"
+          ><i class="fa fa-close"></i></span
+        ><br /><br />
+        <a href="index.html">Home</a><br />
+        <a href="Puja/">Puja</a><br />
+        <a href="City/">City</a><br />
+        <a href="contact/">Contact us</a>
+      </div>
+      <script>
+        function openMenu() {
+          if (document.getElementById("myForm").style.display === "none") {
+            document.getElementById("myForm").style.display = "block";
+            document.getElementById("myForm").style.animation = "myfirst 30000";
+          } else {
+            document.getElementById("myForm").style.display = "none";
+          }
+        }
+
+        function closeform() {
+          document.getElementById("myForm").style.display = "none";
+        }
+      </script>
+      <div class="block1"></div>
+      <!-- Slider -->
+      <div class="slider">
+        <ul id="slides">
+          <li class="slide showing">
+            <div class="overlay"></div>
+
+            <img src="images/1.jpg" height="400px" width="100%" />
+            <div class="onImageText">Durga Puja</div>
+            <button class="button">Book Now</button>
+          </li>
+          <li class="slide">
+            <div class="overlay"></div>
+            <div class="backOverlay">
+              <img src="images/2.jpg" height="400px" width="100%" />
+              <div class="onImageText">Sundar Kand</div>
+              <button class="button">Book Now</button>
             </div>
-        </div>
-        <!--  -->
-        <!-- Registration Modal -->
-        <!--  -->
-        <div class="bodyOverlay" id="registrationOverlay">
-            <div class="loginForm">
-                <a href="index.html"><i class="fa fa-close" style="float:right; color:white; width:30px;"></i></a>
-                <div class="upperblock">
-                    <h1 class="title">Registration</h1>
-                </div>
-                <h1 onclick="pandit()" id="panditji" style="float:left; font-size: 22.5px; margin-left: 22.5px; color: orange;">Pandit Ji</h1>
-                <h1 onclick="client()" id="client" style="float:right; font-size: 22.5px; margin-right: 22.5px; color: gray;">Customer</h1>
-                <div class="loginAvtarBlock">
-                    <img src="images/avatar1.png">
-                </div>
-                <script>
-                    function pandit() {
-                        document.getElementById("panditji").style.color = "orange";
-                        document.getElementById("client").style.color = "gray";
-                        document.getElementById("clientForm").style.display = "none";
-                        document.getElementById("panditjiForm").style.display = "block";
-                    }
+          </li>
+          <li class="slide">
+            <div class="overlay"></div>
 
-                    function client() {
-                        document.getElementById("panditji").style.color = "gray";
-                        document.getElementById("client").style.color = "orange";
-                        document.getElementById("panditjiForm").style.display = "none";
-                        document.getElementById("clientForm").style.display = "block";
-                    }
-                </script>
-                <form id="panditjiForm">
-                    <div class="input-icons">
-                        <i class="fa fa-user icon"></i>
-                        <input class="un" type="text" align="center" placeholder="Username">
-                    </div>
-                    <div class="input-icons">
-                        <i class="fa fa-phone icon"></i>
-                        <input class="un" type="number" align="center" placeholder="Mobile Number"> </div>
-                    <div class="input-icons">
-                        <i class="fa fa-key icon"></i>
-                        <input class="pass" type="text" align="center" placeholder="Enter Password">
-                    </div>
-                    <div class="input-icons">
-                        <i class="fa fa-key icon"></i>
-                        <input class="pass" type="password" align="center" placeholder="Re-Enter Password">
-                    </div>
-                    <p><img src="images/plogolight.png" height="20px" width="200px"></p>
-                    <p><button class="button3">REGISTER</button></p>
-                </form>
+            <img src="images/3.jpg" height="400px" width="100%" />
+            <div class="onImageText">Laxmi Puja</div>
+            <button class="button">Book Now</button>
+          </li>
+        </ul>
+        <script>
+          var slides = document.querySelectorAll("#slides .slide");
+          var currentSlide = 0;
+          var slideInterval = setInterval(nextSlide, 3000);
 
-                <form id="clientForm">
-                    <div class="input-icons">
-                        <i class="fa fa-user icon"></i>
-                        <input class="un" type="text" align="center" placeholder="Username">
-                    </div>
-                    <div class="input-icons">
-                        <i class="fa fa-phone icon"></i>
-                        <input class="un" type="number" align="center" placeholder="Mobile Number"> </div>
-                    <div class="input-icons">
-                        <i class="fa fa-key icon"></i>
-                        <input class="pass" type="text" align="center" placeholder="Enter Password">
-                    </div>
-                    <div class="input-icons">
-                        <i class="fa fa-key icon"></i>
-                        <input class="pass" type="password" align="center" placeholder="Re-Enter Password">
-                    </div>
-                    <p><img src="images/plogolight.png" height="20px" width="200px"></p>
-                    <p><button class="button3">REGISTER</button></p>
-                </form>
+          function nextSlide() {
+            slides[currentSlide].className = "slide";
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].className = "slide showing";
+          }
+        </script>
+      </div>
+      <!-- Login Modal -->
+      <!--  -->
+      <div class="bodyOverlay" id="loginOverlay">
+        <div class="loginForm">
+          <a href="index.html"
+            ><i
+              class="fa fa-close"
+              style="float: right; color: white; width: 30px;"
+            ></i
+          ></a>
+          <div class="upperblock">
+            <h1 class="title">Login</h1>
+          </div>
+          <div class="loginAvtarBlock">
+            <img src="images/avatar1.png" />
+          </div>
+          <form class="form1">
+            <div class="input-icons">
+              <i class="fa fa-phone icon"></i>
+              <input
+                class="un"
+                type="email"
+                align="center"
+                placeholder="Mobile Number"
+              />
             </div>
+            <div class="input-icons">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="pass"
+                type="password"
+                align="center"
+                placeholder="Password"
+              />
+            </div>
+            <p>
+              <img src="images/plogolight.png" height="20px" width="200px" />
+            </p>
+            <p><button class="button3">LOGIN</button></p>
+          </form>
         </div>
-        <!--  -->
-        <!-- <div>
+      </div>
+      <!--  -->
+      <!-- Registration Modal -->
+      <!--  -->
+      <div class="bodyOverlay" id="registrationOverlay">
+        <div class="loginForm">
+          <a href="index.html"
+            ><i
+              class="fa fa-close"
+              style="float: right; color: white; width: 30px;"
+            ></i
+          ></a>
+          <div class="upperblock">
+            <h1 class="title">Registration</h1>
+          </div>
+          <h1
+            onclick="pandit()"
+            id="panditji"
+            style="
+              float: left;
+              font-size: 22.5px;
+              margin-left: 22.5px;
+              color: orange;
+            "
+          >
+            Pandit Ji
+          </h1>
+          <h1
+            onclick="client()"
+            id="client"
+            style="
+              float: right;
+              font-size: 22.5px;
+              margin-right: 22.5px;
+              color: gray;
+            "
+          >
+            Customer
+          </h1>
+          <div class="loginAvtarBlock">
+            <img src="images/avatar1.png" />
+          </div>
+          <script>
+            function pandit() {
+              document.getElementById("panditji").style.color = "orange";
+              document.getElementById("client").style.color = "gray";
+              document.getElementById("clientForm").style.display = "none";
+              document.getElementById("panditjiForm").style.display = "block";
+            }
+
+            function client() {
+              document.getElementById("panditji").style.color = "gray";
+              document.getElementById("client").style.color = "orange";
+              document.getElementById("panditjiForm").style.display = "none";
+              document.getElementById("clientForm").style.display = "block";
+            }
+          </script>
+          <form id="panditjiForm">
+            <div class="input-icons">
+              <i class="fa fa-user icon"></i>
+              <input
+                class="un"
+                type="text"
+                align="center"
+                placeholder="Username"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-phone icon"></i>
+              <input
+                class="un"
+                type="number"
+                align="center"
+                placeholder="Mobile Number"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="pass"
+                type="text"
+                align="center"
+                placeholder="Enter Password"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="pass"
+                type="password"
+                align="center"
+                placeholder="Re-Enter Password"
+              />
+            </div>
+            <p>
+              <img src="images/plogolight.png" height="20px" width="200px" />
+            </p>
+            <p><button class="button3">REGISTER</button></p>
+          </form>
+
+          <form id="clientForm">
+            <div class="input-icons">
+              <i class="fa fa-user icon"></i>
+              <input
+                class="un"
+                type="text"
+                align="center"
+                placeholder="Username"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-phone icon"></i>
+              <input
+                class="un"
+                type="number"
+                align="center"
+                placeholder="Mobile Number"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="pass"
+                type="text"
+                align="center"
+                placeholder="Enter Password"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="pass"
+                type="password"
+                align="center"
+                placeholder="Re-Enter Password"
+              />
+            </div>
+            <p>
+              <img src="images/plogolight.png" height="20px" width="200px" />
+            </p>
+            <p><button class="button3">REGISTER</button></p>
+          </form>
+        </div>
+      </div>
+      <!--  -->
+      <!-- <div>
             <div class="outerPulseContainer">
                 <div class="pulsingCircle"></div>
                 <div class="pulsingCircle"></div>
@@ -214,11 +332,95 @@
                 </div>
             </div>
         </div> -->
+       
+      <!--Services-->
+      <div id="flex-container">
+        <div class="flex-item">
+            <div class="counter" data-target="200">0</div>
+            <span class="value">Available Pandit</span>
+        </div>
+        <div class="flex-item">
+            <div class="counter" data-target="300">0</div>
+            <span class="value">City's we serve</span>
+        </div>
+        <div class="flex-item">
+            <div class="counter" data-target="500">0</div>
+            <span class="value">Puja's we provide</span>
+        </div>
+        <div class="flex-item">
+            <div class="counter" data-target="400">0</div>
+            <span class="value">Satisfied customer</span>
+        </div>
+        </div>
+      
+      <!--Services-->
+      <script>
+        const service = document.querySelectorAll('.counter');
+const speed = 200; // The lower the slower
 
+service.forEach(counter => {
+	const updateCount = () => {
+		const target = +counter.getAttribute('data-target');
+		const count = +counter.innerText;
 
+		// Lower inc to slow and higher to slow
+		const inc = target / speed;
 
+		// console.log(inc);
+		// console.log(count);
 
+		// Check if target is reached
+		if (count < target) {
+			// Add inc to count and output in counter
+			counter.innerText = count + inc;
+			// Call function every ms
+			setTimeout(updateCount, 1);
+		} else {
+			counter.innerText = target;
+		}
+	};
+
+	updateCount();
+});
+
+      </script>
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-top">
+          <div class="footer-section a">
+            <h1 class="name">GET PANDITJI</h1>
+            <p>
+              You can get panditji here for any type of puja.You can book pandit
+              from our website quickly .
+            </p>
+            <div class="contact">
+              <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span
+              ><br /><br />
+              <span
+                ><i class="fas fa-envelope"></i> &nbsp;
+                getpanditji@gmail.com</span
+              >
+            </div>
+          </div>
+          <div class="footer-section b">
+            <h2>Quick Links</h2>
+
+            <ul>
+              <a href="#"><li>Home</li></a>
+              <a href="#"><li>Puja</li></a>
+              <a href="#"><li>City</li></a>
+              <a href="#"><li>Contact</li></a>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          &copy; 2020 All rights reserved | Get Panditji.com
+        </div>
+      </div>
+
+      <!-- Footer end -->
     </section>
-</body>
-
+    
+  </body>
 </html>

@@ -420,7 +420,7 @@ input:hover {
 .mobile .iconss {
     margin-right: 20px;
     float: right;
-    color: white;
+    color: #dc5c04;
     font-size: 20px;
     margin-top: 40px;
     height: auto;
@@ -683,7 +683,7 @@ input:hover {
     text-align: center;
 }
 
-.number {
+.counter {
     font-size: 60px;
     text-align: center;
     color: white;
@@ -858,15 +858,15 @@ td {
     text-align: center;
 }
 
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 540px) {
     .cards {
-        width: 80%;
+         width: 300px; 
     }
-}
+} */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 540px) {
     .flipperCard {
-        width: 30%;
+        width: 70%;
     }
     .main {
         flex-wrap: wrap;
@@ -942,3 +942,55 @@ td {
     font-size: 20px;
     outline-color: black;
 }
+
+
+.service
+{
+    height:300px;
+    width:100%;
+     
+}
+
+.serviceflex
+{
+    Display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+@media screen and (max-width: 1000px)
+{
+    .service
+{
+    height:auto;
+    width:100%;
+    
+     
+}
+.serviceflex
+{
+    Display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+}
+.diamond
+{
+    height:100px;
+    width:100px;
+    border:1px solid #4d4d4d;
+    
+}
+.servicetext
+{
+    font-size:30px;
+    color:#dc4c08;
+}
+.diamond:hover
+{
+    height:100px;
+    width:100px;
+    border:1px solid #dc4c08;
+    transform: rotate(45deg);
+} 
