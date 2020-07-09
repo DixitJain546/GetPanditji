@@ -15,24 +15,48 @@
     <section>
         <nav class="desktop" aos="fade">
             <div class="plogo">
-                <img src="../images/logo.png" height="140px" width="auto" alt="Logo" style="float:left;">
-                <div class="pandit">
-                    <img src="../images/plogolight.png" height="70px" width="auto" alt="LogoName" style="float:left;">
-                </div>
-                <div class="menulog">
-                    <button>Login</button>&nbsp &nbsp
-                    <Button>Register</button>
-                </div>
+              <img
+                src="../images/logo.png"
+                height="140px"
+                width="auto"
+                alt="Logo"
+                style="float: left;"
+              />
+              <div class="pandit">
+                <img
+                  src="../images/plogolight.png"
+                  height="70px"
+                  width="auto"
+                  alt="LogoName"
+                  style="float: left;"
+                />
+              </div>
+              <div class="menulog">
+                <button onclick="loginForm()">Login</button>&nbsp &nbsp
+                <button onclick="registrationForm()">Register</button>
+              </div>
             </div>
+            
+            <script>
+              function loginForm() {
+                var o = document.getElementById("loginOverlay");
+                o.style.display = "block";
+              }
+    
+              function registrationForm() {
+                var o = document.getElementById("registrationOverlay");
+                o.style.display = "block";
+              }
+            </script>
             <div class="menu">
-                <div class="menualign"><a href="../index.html" class="selected">Home</a>
-                    <a href="index.html">Puja</a>
-                    <a href="../booking/orderList.html">Orders</a>
-                   
-                </div>
+              <div class="menualign">
+                <a href="../index.html" class="selected">Home</a>
+                <a href="puja/index.html">Puja</a>
+                <a href="../booking/orderList.html">Orders</a><br/>
+              </div>
             </div>
-        </nav>
-        <nav class="mobile">
+          </nav>
+          <nav class="mobile">
             <div class="moblogin">
                 <button onclick="loginForm()">Login</button>&nbsp &nbsp
                 <button onclick="registrationForm()">Register</button>
@@ -56,7 +80,7 @@
             <span onclick="closeform()" style="font-size:25px;margin-left: 110px;color:white;"><i class="fa fa-close"></i></span><br><br>
             <a href="../index.html">Home</a><br>
             <a href="Puja/">Puja</a><br>
-            <a href="./booking/orderList.html">Orders</a>
+            <a href="../booking/orderList.html">Orders</a>
                    
         </div>
         <script>
@@ -77,6 +101,184 @@
         </script>
         <div class="block1"></div>
         <br><br>
+
+         <!-- Login Modal -->
+      <!--  -->
+      <div class="bodyOverlay" id="loginOverlay">
+        <div class="loginForm">
+          <a href="index.html"
+            ><i
+              class="fa fa-close"
+              style="float: right; color: white; width: 30px;"
+            ></i
+          ></a>
+          <div class="upperblock">
+            <h1 class="title">Login</h1>
+          </div>
+          <div class="loginAvtarBlock">
+            <img src="../images/avatar1.png" />
+          </div>
+          <form class="form1">
+            <div class="input-icons">
+              <i class="fa fa-phone icon"></i>
+              <input
+                class="un"
+                type="email"
+                align="center"
+                placeholder="Mobile Number"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="pass"
+                type="password"
+                align="center"
+                placeholder="Password"
+              />
+            </div>
+            <p>
+              <img src="../images/plogolight.png" height="20px" width="200px" />
+            </p>
+            <p><button class="button3">LOGIN</button></p>
+          </form>
+        </div>
+      </div>
+      <!--  -->
+      <!-- Registration Modal -->
+      <!--  -->
+      <div class="bodyOverlay" id="registrationOverlay">
+        <div class="loginForm">
+          <a href="index.html"
+            ><i
+              class="fa fa-close"
+              style="float: right; color: white; width: 30px;"
+            >
+        </i>
+        </a>
+          <div class="upperblock">
+            <h1 class="title">Registration</h1>
+          </div>
+          <h1
+            onclick="pandit()"
+            id="panditji"
+            class="pandit1"
+          >
+            Pandit Ji
+          </h1>
+          <h1
+            onclick="client()"
+            id="client"
+            class="customer"
+          >
+            Customer
+          </h1>
+          <div class="loginAvtarBlock">
+            <img src="../images/avatar1.png" />
+          </div>
+          <script>
+            function pandit() {
+              document.getElementById("panditji").style.color = "orange";
+              document.getElementById("client").style.color = "gray";
+              document.getElementById("clientForm").style.display = "none";
+              document.getElementById("panditjiForm").style.display = "block";
+            }
+
+            function client() {
+              document.getElementById("panditji").style.color = "gray";
+              document.getElementById("client").style.color = "orange";
+              document.getElementById("panditjiForm").style.display = "none";
+              document.getElementById("clientForm").style.display = "block";
+            }
+          </script>
+          <form id="panditjiForm">
+            <div class="input-icons">
+              <i class="fa fa-user icon"></i>
+              <input
+                class="un"
+                type="text"
+                align="center"
+                placeholder="Username"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-phone icon"></i>
+              <input
+                class="un"
+                type="number"
+                align="center"
+                placeholder="Mobile Number"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="pass"
+                type="text"
+                align="center"
+                placeholder="Enter Password"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="pass"
+                type="password"
+                align="center"
+                placeholder="Re-Enter Password"
+              />
+            </div>
+            <p>
+              <img src="../images/plogolight.png" height="20px" width="200px" />
+            </p>
+            <p><button class="button3">REGISTER</button></p>
+          </form>
+
+          <form id="clientForm">
+            <div class="input-icons">
+              <i class="fa fa-user icon"></i>
+              <input
+                class="un"
+                type="text"
+                align="center"
+                placeholder="Username"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-phone icon"></i>
+              <input
+                class="un"
+                type="number"
+                align="center"
+                placeholder="Mobile Number"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="pass"
+                type="text"
+                align="center"
+                placeholder="Enter Password"
+              />
+            </div>
+            <div class="input-icons">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="pass"
+                type="password"
+                align="center"
+                placeholder="Re-Enter Password"
+              />
+            </div>
+            <p>
+              <img src="../images/plogolight.png" height="20px" width="200px" />
+            </p>
+            <p><button class="button3">REGISTER</button></p>
+          </form>
+        </div>
+      </div>
+     
         <!-- puja card -->
 
         <section class="main">

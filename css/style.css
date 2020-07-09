@@ -232,7 +232,46 @@ form {
     box-shadow: 0 2px 0px rgba(0, 0, 0, 0.3);
 }
 
+.customer{
+    float: right;
+    font-size: 22.5px;
+    margin-right: 22.5px;
+    color: gray;
+}
+ .pandit1{
+    float: left;
+    font-size: 22.5px;
+    margin-left: 22.5px;
+    color: orange;
+ }
 
+ @media screen and (max-width: 450px)
+{
+    .loginAvtarBlock {
+        margin-left: 30%;
+    }
+    .pandit1{
+        font-size: 12.5px;
+    margin-left: 15.5px;
+    }
+    .customer{
+        font-size: 12.5px;
+    margin-right: 15.5px;
+    }
+    .un{
+        font-size: 13px;
+    }
+    .pass{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 420px)
+{
+    .loginAvtarBlock {
+        margin-left: 28%;
+    }
+    
+}
 /* ------------Login form ends ----------------------------*/
 
 
@@ -247,6 +286,7 @@ form {
     margin-top: 50px;
     text-align: center;
     border-radius: 20px;
+
 }
 
 #bookingImage {
@@ -277,6 +317,7 @@ form {
 
 .booking h2 {
     color: #432726
+    
 }
 
 .booking h3 {
@@ -286,6 +327,7 @@ form {
 
 .booking-img:hover {
     transform: scale(1.2);
+    margin-top: 10px;
 }
 
 
