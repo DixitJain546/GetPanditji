@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
     <script src="bower_components/aos/dist/aos.js"></script>
@@ -16,13 +16,13 @@
     <section>
         <nav class="desktop" aos="fade">
             <div class="plogo">
-                <img src="images/logo.png" height="140px" width="auto" alt="Logo" style="float:left;">
+                <img src="../images/logo.png" height="140px" width="auto" alt="Logo" style="float:left;">
                 <div class="pandit">
-                    <img src="images/plogolight.png" height="70px" width="auto" alt="LogoName" style="float:left;">
+                    <img src="../images/plogolight.png" height="70px" width="auto" alt="LogoName" style="float:left;">
                 </div>
                 <div class="menulog">
-                    <button onclick="loginForm()">Login</button>&nbsp &nbsp
-                    <Button onclick="registrationForm()">Register</button>
+                    <button>Logout</button>&nbsp &nbsp
+                    
                 </div>
             </div>
             <script>
@@ -37,10 +37,10 @@
                 }
             </script>
             <div class="menu">
-                <div class="menualign"><a href="index1.html" class="selected">Home</a>
-                    <a href="Puja/">Puja</a>
-                    <a href="City/">City</a>
-                    <a href="contact/">Contact us</a>
+                <div class="menualign"><a href="panditjiHome.html" class="selected">Home</a>
+                    <a href="editprofile.html">Edit Profile</a>
+                    <a href="myorder.html">Orders</a>
+                    
                 </div>
             </div>
         </nav>
@@ -51,7 +51,18 @@
                 <a onclick="openMenu()"><i class="fa fa-bars"></i></a>
             </div>
         </nav>
-
+        <div class="om" id="myForm">
+            <br /><br />
+            <span
+              onclick="closeform()"
+              style="font-size: 25px; margin-left: 110px; color: white;"
+              ><i class="fa fa-close"></i></span
+            ><br /><br />
+            <a href="panditjiHome.html">Home</a><br />s
+            <a href="editprofile.html">Edit profile</a><br />
+            <a href="myorder.html">Orders</a><br />
+           
+          </div>
         <script>
             function openMenu() {
                 if (document.getElementById("myForm").style.display === 'none') {
@@ -69,41 +80,70 @@
             }
         </script>
         <div class="block1"></div>
-        <!-- Slider -->
-        <div class="slider">
+        <div>
+            <div class="backdrop">
+                <table class="profile">
+                    <tr>
+                        <th colspan="2" align="center" ><img src="../images/pandit2.jpg" class="dp" /></th>
+                    </tr>
+                    <tr >
+                        <th colspan="2" align="center"><h1>Pandit Ramshankarji</h1></th>
+                    </tr>
+                    
+                    <tr>
+                        <th>
+                            Mobile Number :
+                        </th>
+                        <td>
+                            9898989898
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            User Name :
+                        </th>
+                        <td>
+                            PRamshankarji
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                           Age :
+                        </th>
+                        <td>
+                            35
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Experience :
+                        </th>
+                        <td>
+                            8 years
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Specialist in :
+                        </th>
+                        <td>
+                            Durga puja<br>Sundar kand<br>ganesh puja
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Place :
+                        </th>
+                        <td>
+                            Ahmedabad
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+            <br><br>
+        </div>
 
-            <ul id="slides">
-                <li class="slide showing">
-                    <div class=overlay></div>
-
-                    <img src="images/1.jpg" height="400px" width="100%">
-                    <div class="onImageText">Durga Puja</div>
-                    <button class="button">Book Now</button>
-                </li>
-                <li class="slide">
-                    <div class=overlay></div>
-                    <div class="backOverlay">
-                        <img src="images/2.jpg" height="400px" width="100%">
-                        <div class="onImageText">Sundar Kand</div>
-                        <button class="button">Book Now</button>
-                    </div>
-                </li>
-                <li class="slide">
-                    <div class=overlay></div>
-
-                    <img src="images/3.jpg" height="400px" width="100%">
-                    <div class="onImageText">Laxmi Puja</div>
-                    <button class="button">Book Now</button>
-                </li>
-            </ul>
-            <script>
-                var slides = document.querySelectorAll('#slides .slide');
-                var currentSlide = 0;
-                var slideInterval = setInterval(nextSlide, 3000);
-
-                function nextSlide() {
-                    slides[currentSlide].className = 'slide';
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    slides[currentSlide].className = 'slide showing';
-                }
-            </script>
+        </section>
+        </body>
+        </html>

@@ -1042,3 +1042,43 @@ td {
     background: #dc5c04;
     color: #fff;
 }
+
+/* pandit page css */
+
+.backdrop{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #eee;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.profile{
+    width:80%;
+    margin-left: 10%;
+    
+}
+.profile th{
+    color : orange;
+    width:50%;
+    font-size: 1.5rem;
+}
+.profile td{
+    color : #fff;
+    width:50%;
+    border: none;
+    /* text-align: center; */
+}
+.dp{
+    height:150px;
+    width: 150px;
+    border-radius: 100px;
+    /* margin-top: -75px; */
+}
+@media screen and (max-width: 420px) {
+    .profile th{
+        
+        font-size: 1rem;
+    }
+}
