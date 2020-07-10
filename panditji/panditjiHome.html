@@ -38,19 +38,33 @@
             </script>
             <div class="menu">
                 <div class="menualign"><a href="panditjiHome.html" class="selected">Home</a>
-                    <a href="editprofile.html">Edit Profile</a>
                     <a href="myorder.html">Orders</a>
                     
                 </div>
             </div>
         </nav>
         <nav class="mobile">
-            <img src="images/logo.png" height="90px" width="auto" alt="Logo" style="float:left;margin-top: 5px;margin-left: 20px;">
-
+            
+            <img
+              src="../images/logo.png"
+              height="90px"
+              width="auto"
+              alt="Logo"
+    
+              style="float: left; margin-top: -15px; margin-left: 20px;"
+            />
+            <div >
+              <img
+                src="../images/plogolight.png"
+                height="30px"
+                width="auto"
+                alt="LogoName"
+                style="float: left; margin-top: 15px"
+              />
             <div class="iconss">
-                <a onclick="openMenu()"><i class="fa fa-bars"></i></a>
+              <a onclick="openMenu()"><i class="fa fa-bars"></i></a>
             </div>
-        </nav>
+          </nav>
         <div class="om" id="myForm">
             <br /><br />
             <span
@@ -58,10 +72,10 @@
               style="font-size: 25px; margin-left: 110px; color: white;"
               ><i class="fa fa-close"></i></span
             ><br /><br />
-            <a href="panditjiHome.html">Home</a><br />s
-            <a href="editprofile.html">Edit profile</a><br />
+            <a href="panditjiHome.html">Home</a><br />
+            
             <a href="myorder.html">Orders</a><br />
-           
+            <a href="../index.html">Logout</a><br />
           </div>
         <script>
             function openMenu() {
@@ -80,19 +94,20 @@
             }
         </script>
         <div class="block1"></div>
-        <div>
-            <div class="backdrop">
+        <div id="panditflex">
+            <div class="backdrop" id="update"><br>
                 <table class="profile">
-                    <tr>
-                        <th colspan="2" align="center" ><img src="../images/pandit2.jpg" class="dp" /></th>
-                    </tr>
                     <tr >
                         <th colspan="2" align="center"><h1>Pandit Ramshankarji</h1></th>
                     </tr>
+                    <tr>
+                        <th colspan="2" align="center" style="padding-top: -50px;padding-bottom: 30px;"><img src="../images/pandit6.jpg" class="dp" /></th>
+                    </tr>
+                    
                     
                     <tr>
                         <th>
-                            Mobile Number :
+                            Mobile Number
                         </th>
                         <td>
                             9898989898
@@ -100,7 +115,7 @@
                     </tr>
                     <tr>
                         <th>
-                            User Name :
+                            User Name
                         </th>
                         <td>
                             PRamshankarji
@@ -108,7 +123,7 @@
                     </tr>
                     <tr>
                         <th>
-                           Age :
+                           Age
                         </th>
                         <td>
                             35
@@ -116,7 +131,7 @@
                     </tr>
                     <tr>
                         <th>
-                            Experience :
+                            Experience
                         </th>
                         <td>
                             8 years
@@ -124,7 +139,7 @@
                     </tr>
                     <tr>
                         <th>
-                            Specialist in :
+                            Specialist in
                         </th>
                         <td>
                             Durga puja<br>Sundar kand<br>ganesh puja
@@ -132,18 +147,204 @@
                     </tr>
                     <tr>
                         <th>
-                            Place :
+                            Place
                         </th>
                         <td>
                             Ahmedabad
                         </td>
                     </tr>
+                    <tr><td></td></tr>
+                    <tr>
+                        <th colspan="2">
+                            <button onclick="editprofile()">Edit Profile</button>
+                        </th>
+                    </tr>
+                </table>
+                <script>
+                    function editprofile(){
+                        var o = document.getElementById("update");
+                        o.style.display = "none";
+                        var p = document.getElementById("edit");
+                        p.style.display = "block";
+                        
+                    }
+                </script>
+                <br>
+            </div>
+            <div class="backdrop" id="edit"><br>
+                <table class="profile">
+                    <tr >
+                        <th colspan="2" align="center"><h1>Pandit Ramshankarji</h1></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" align="center" style="padding-top: -50px;padding-bottom: 30px;"><img src="../images/pandit6.jpg" class="dp" /></th>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th>
+                            Mobile Number
+                        </th>
+                        <td>
+                            <input type="text" value="9898989898"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            User Name
+                        </th>
+                        <td>
+                            <input type="text" value="PRamshankarji"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                           Age
+                        </th>
+                        <td>
+                            <input type="number" value="35"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Experience
+                        </th>
+                        <td>
+                            <input type="text" value="8 years"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Specialist in
+                        </th>
+                        <td>
+                            <input type="text" value="Durga puja"/><br>
+                            <input type="text" value="Sundar kand"/><br>
+                            <input type="text" value="ganesh puja"/><br><br><br><br>
+                            <button id="add">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Place
+                        </th>
+                        <td>
+                            <input type="text" value="Ahmedabad"/>
+                        </td>
+                    </tr>
+                    <tr><td></td></tr>
+                    <tr>
+                        <th colspan="2">
+                            <button onclick="updateprofile()">Update Profile</button>
+                        </th>
+                    </tr>
+                </table>
+                <script>
+                    function updateprofile(){
+                        var p = document.getElementById("edit");
+                        p.style.display = "none";
+                        var o = document.getElementById("update");
+                        o.style.display = "block";
+                    }
+                </script>
+                <br>
+            </div>
+            <div class="backdrop"><br>
+                <h1 align="center" style="font-size: 2rem;color:orange">New orders </h1>
+                <br>
+                <table class="order" style="overflow-y: scroll;">
+                    <tr >
+                        <td>
+                            Shrenik<br>
+                            9898989888<br>
+                            1/aayojan soc , adajan, Ahmedabad<br>
+                            22/7/2020<br>
+                            12:00 PM
+                        </td>
+                        <th>
+                            <button>Confirm</button><br>
+                            <button>&nbsp;Reject&nbsp;</button>
+                        </th>
+                    </tr>
+                    <tr >
+                        <td style="color: orange;">
+                            Rahul<br>
+                            9897779888<br>
+                            2 bhavana flat , paldi, Ahmedabad<br>
+                            23/7/2020<br>
+                            1:00 PM
+                        </td>
+                        <th>
+                            <button>Confirm</button><br>
+                            <button>&nbsp;Reject&nbsp;</button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Rajesh<br>
+                            98666669888<br>
+                            vashishth binglow , shyamal, Ahmedabad<br>
+                            1/8/2020<br>
+                            5:30 PM
+                        </td>
+                        <th>
+                            <button>Confirm</button><br>
+                            <button>&nbsp;Reject&nbsp;</button>
+                        </th>
+                    </tr>
+                    <tr >
+                        <td style="color: orange;">
+                            Deeksha<br>
+                            8899889988<br>
+                            shahiflats , shahibaug, Ahmedabad<br>
+                            12/7/2020<br>
+                            10:00 AM
+                        </td>
+                        <th>
+                            <button>Confirm</button><br>
+                            <button>&nbsp;Reject&nbsp;</button>
+                        </th>
+                    </tr>
+                    
                 </table>
                 <br>
             </div>
-            <br><br>
         </div>
 
-        </section>
+        <!-- Footer-->
+ <div class="footer">
+    <div class="footer-top">
+        <div class="footer-section a">
+            <h1 class="name">GET PANDITJI</h1>
+            <P>
+                You can get panditji here for any type of puja.You can book pandit from our website quickly .
+            </P>
+            <div class="contact">
+                <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span><br><br>
+                <span><i class="fa fa-envelope"></i> &nbsp; getpanditji@gmail.com</span>
+            </div>
+        </div>
+        <div class="footer-section b">
+            <h2>Quick Links </h2>
+
+            <ul>
+                <a href="panditjiHome.html">
+                    <li>Home</li>
+                </a>
+                <a href="myorder.html">
+                    <li>Orders</li>
+                </a>
+               
+                
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2020 All rights reserved | Get Panditji.com
+    </div>
+</div>
+
+</section>
+
         </body>
         </html>

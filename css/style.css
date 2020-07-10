@@ -1087,13 +1087,18 @@ td {
 
 /* pandit page css */
 
+#panditflex {
+    Display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+
 .backdrop{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(77, 77, 77, 0.9);
     color: #eee;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 50px;
-    width: 80%;
+    border-radius: 40px;
+    margin-top: 75px;
+    width: 35%;
 }
 
 .profile{
@@ -1112,15 +1117,129 @@ td {
     border: none;
     /* text-align: center; */
 }
+.order{
+    width:80%;
+    margin-left: 10%;
+    
+}
+.order th{
+    color : orange;
+    width:50%;
+    font-size: 1.5rem;
+}
+.order tr{
+    border: 1px solid #eee;
+}
+.order td{
+    color : #fff;
+    width:50%;
+    border: none;
+    /* text-align: center; */
+}
 .dp{
-    height:150px;
-    width: 150px;
-    border-radius: 100px;
+    height:175px;
+    width: 225px;
+    
     /* margin-top: -75px; */
 }
 @media screen and (max-width: 420px) {
     .profile th{
         
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
+    .profile td{
+        font-size: 0.75rem;
+    }
+    .order th{
+        
+        font-size: 0.75rem;
+    }
+    .order td{
+        font-size: 0.75rem;
+    }
+    .dp{
+        height:125px;
+        width: 150px;
+        
+        /* margin-top: -75px; */
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    #panditflex {
+        Display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    }
+    .backdrop{
+        
+        width: 65%;
+    }
+    #edit input {
+        font-size: 0.65rem;
+        padding: 0rem;
+    }  
+}
+#add{
+    border: 1px solid #4d4d4d;
+    font-size: 15.75px;
+    background: white;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #4d4d4d;
+    margin-left: 35%;
+}
+.profile button{
+    border: 1px solid #4d4d4d;
+    font-size: 18.75px;
+    background: white;
+    padding: 5px;
+    padding-left: 45px;
+    padding-right: 45px;
+    color: #4d4d4d;
+}
+.order button{
+    border: 1px solid #4d4d4d;
+    font-size: 0.5rem;
+    background: white;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #4d4d4d;
+}
+.profile button:hover {
+    border: 1px;
+    background: #dc5c04;
+    color: #fff;
+}
+.order button:hover {
+    border: 1px;
+    background: #dc5c04;
+    color: #fff;
+}
+#edit{
+    display: none;
+}
+
+#edit input {
+    width: 70%;
+    padding: 0.5rem;
+    box-shadow: none;
+    height: auto;
+    border-radius: 0;
+    float: left;
+    color: #fff;
+    outline: none;
+    border: 1px solid #fff;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    background: none;
+    -webkit-appearance: none; 
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+	transition: 0.5s all;
 }
